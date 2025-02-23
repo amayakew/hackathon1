@@ -9,9 +9,9 @@ def main():
     user_manager = UsersManager()
     user = user_manager.get_user(name)
     if user:
-        print(f"Hello, {user.name}")
+        print(f"\nHello, {user.name}")
     else:
-        print(f"Hello, {name}. Looks like you new here. Please answer few questions to create your workout plan: ")
+        print(f"\nHello, {name}. Looks like you new here. Please answer few questions to create your workout plan: ")
         user = registration(name)
         create_workout_plan(user)
     display_menu(user)

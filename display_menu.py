@@ -21,9 +21,9 @@ def display_menu(user):
     elif user_choice == '4':
         update_user_details(user)
     elif user_choice == '5':
-        print('Bye! Stay strong and healthy, have a good day;)')
+        print('\nBye! Stay strong and healthy, have a good day;)')
     else:
-        print('Invalid choice. Choose number from 1 to 4.')
+        print('\nInvalid choice. Choose number from 1 to 4.')
         display_menu(user)
 
 def update_user_details(user):
@@ -55,7 +55,7 @@ def update_user_details(user):
 
 
 def workout_instructions(user):
-    print(f'\nHere is your wotkout plan according to your expertice level: {user.level}:')
+    print(f'\nHere is your wotkout plan according to your expertice level: {user.level}:\n')
     if user.goal == 'weight loss':
         print('Perform 3-4 sets with 10-15 reps for each exercise.')
     elif user.goal == 'strength':
@@ -81,7 +81,7 @@ def display_workout_plan(user):
         print(f"\nExercises for workout: {plan}")
         for exercise in exercises_list:
             exercise.print_summary()
-    user_input = input("Want to see instructions? Press (y). To go back to menu press any other button. ")
+    user_input = input("\nWant to see instructions? Press (y). To go back to menu press any other button. ")
     if user_input == 'y':
         return view_exercise_instruction(user)
     return display_menu(user)
@@ -110,7 +110,7 @@ def view_exercise_instruction(user):
 def change_workout_plan(user):
     delete_plan(user)
     create_workout_plan(user)
-    user_input = input("Want to see new plan? Press 1. To go back to menu press any other button. ")
+    user_input = input("\nWant to see new plan? Press 1. To go back to menu press any other button. ")
     if user_input == '1':
         return display_workout_plan(user)
     return display_menu(user)
